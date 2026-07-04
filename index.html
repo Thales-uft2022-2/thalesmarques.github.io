@@ -136,6 +136,26 @@ header::after {
     transform: translateY(-3px);
 }
 
+.btn-whatsapp {
+    background: #25D366;
+    border: none;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-comercial {
+    background: #128C7E;
+    border: none;
+}
+
+.btn-whatsapp-comercial:hover {
+    background: #0d6b5f;
+    box-shadow: 0 10px 30px rgba(18, 140, 126, 0.3);
+}
+
 section {
     padding: 80px 10%;
 }
@@ -364,6 +384,47 @@ section {
     text-decoration: none;
 }
 
+.contact .whatsapp-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.contact .whatsapp-links a {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact .whatsapp-links a:hover {
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.whatsapp-pessoal {
+    background: #25D366;
+}
+
+.whatsapp-pessoal:hover {
+    background: #1da851;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-comercial {
+    background: #128C7E;
+}
+
+.whatsapp-comercial:hover {
+    background: #0d6b5f;
+    box-shadow: 0 10px 30px rgba(18, 140, 126, 0.3);
+}
+
 footer {
     background: #020617;
     text-align: center;
@@ -423,6 +484,11 @@ footer {
     .hero .badge {
         font-size: 0.75rem;
         padding: 4px 12px;
+    }
+
+    .contact .whatsapp-links {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -589,6 +655,27 @@ footer {
             </div>
         </div>
 
+        <!-- Projeto 5: AgroTech -->
+        <div class="project">
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, #2d5a1e, #4caf50);">
+                🌱
+            </div>
+            <div class="project-body">
+                <h3>🌱 AgroTech</h3>
+                <p>Sistema de gestão para o agronegócio, com monitoramento de plantações, controle de insumos e relatórios de produtividade.</p>
+                <div class="project-tags">
+                    <span class="project-tag">React.js</span>
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">PostgreSQL</span>
+                    <span class="project-tag">IoT</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">🔗 Em Breve</a>
+                    <a href="https://github.com/Thales-uft2022-2/agrotech" target="_blank">📂 Código</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Outros Projetos -->
@@ -660,6 +747,21 @@ footer {
             📧 <strong>Email:</strong>
             <a href="mailto:thalesmarques530@gmail.com">thalesmarques530@gmail.com</a>
         </p>
+
+        <!-- WhatsApp -->
+        <div style="margin-top: 25px;">
+            <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                💬 <strong>WhatsApp</strong>
+            </p>
+            <div class="whatsapp-links">
+                <a href="https://wa.me/5563999531731" target="_blank" class="whatsapp-pessoal">
+                    📱 Pessoal: (63) 99953-1731
+                </a>
+                <a href="https://wa.me/556332297819" target="_blank" class="whatsapp-comercial">
+                    🏢 Comercial: (63) 3229-7819
+                </a>
+            </div>
+        </div>
 
         <div class="social-links">
             <a href="https://github.com/Thales-uft2022-2" target="_blank">🐙 GitHub</a>
