@@ -3,1409 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="Portfólio de Thales Marques Rodrigues, estudante de Sistemas para Internet no IFTO, com experiência em desenvolvimento web, criação de sites, aplicativos mobile Android e iOS, suporte técnico e banco de dados.">
 <title>Thales Marques Rodrigues | Portfólio</title>
-
-<meta
-    name="description"
-    content="Portfólio de Thales Marques Rodrigues, estudante de Sistemas para Internet no IFTO, com projetos em desenvolvimento web, banco de dados, Power BI, Linux e VPS."
->
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+:root{
+  --bg:#07111f; --bg2:#0b1728; --card:rgba(15,31,51,.74); --card2:#101f33;
+  --text:#f8fafc; --muted:#a9b8ca; --primary:#38bdf8; --primary2:#2563eb;
+  --border:rgba(125,211,252,.16); --green:#34d399;
 }
-
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #0f172a;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(
-        circle,
-        rgba(56, 189, 248, 0.1),
-        transparent 70%
-    );
-    top: -200px;
-    right: -200px;
-    border-radius: 50%;
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(
-        circle,
-        rgba(37, 99, 235, 0.08),
-        transparent 70%
-    );
-    bottom: -100px;
-    left: -100px;
-    border-radius: 50%;
-}
-
-.hero {
-    max-width: 900px;
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
-    animation: fadeInDown 1s ease;
-}
-
-.hero h1 span {
-    color: #38bdf8;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #cbd5e1;
-    margin-bottom: 15px;
-    animation: fadeInUp 1s ease;
-}
-
-.badges {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.hero .badge {
-    display: inline-block;
-    background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
-    padding: 7px 18px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 25px;
-}
-
-/* =========================
-   BOTÕES
-========================= */
-
-.btn {
-    display: inline-block;
-    padding: 14px 35px;
-    background: #2563eb;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid #2563eb;
-}
-
-.btn-outline:hover {
-    background: #2563eb;
-}
-
-/* =========================
-   SEÇÕES
-========================= */
-
-section {
-    padding: 80px 10%;
-}
-
-.section-title {
-    font-size: 2.2rem;
-    color: #38bdf8;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #38bdf8;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.card {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    border-color: rgba(56, 189, 248, 0.3);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-.card h3 {
-    color: #38bdf8;
-    margin-bottom: 10px;
-}
-
-/* =========================
-   PROJETOS
-========================= */
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.project {
-    background: #1e293b;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    transition: 0.4s;
-}
-
-.project:hover {
-    transform: translateY(-8px);
-    border-color: #38bdf8;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-.project-img-placeholder {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-}
-
-.project-body {
-    padding: 25px;
-}
-
-.project-body h3 {
-    color: #38bdf8;
-    margin-bottom: 8px;
-    font-size: 1.2rem;
-}
-
-.project-body p {
-    color: #cbd5e1;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 15px;
-}
-
-.project-tag {
-    background: rgba(56, 189, 248, 0.12);
-    color: #38bdf8;
-    padding: 4px 14px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-.project-links {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.project-links a {
-    color: #38bdf8;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.project-links a:hover {
-    color: #7dd3fc;
-    text-decoration: underline;
-}
-
-/* =========================
-   EXPERIÊNCIA
-========================= */
-
-.experiencia-grid {
-    display: grid;
-    gap: 18px;
-}
-
-.experiencia-item {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 16px;
-    border-left: 4px solid #38bdf8;
-    transition: 0.3s;
-}
-
-.experiencia-item:hover {
-    border-left-color: #2563eb;
-    transform: translateX(5px);
-}
-
-.experiencia-item.atual {
-    border-left-color: #22c55e;
-}
-
-.experiencia-item h3 {
-    color: #ffffff;
-    font-size: 1.1rem;
-    margin-bottom: 4px;
-}
-
-.experiencia-item .cargo {
-    color: #38bdf8;
-    font-weight: 600;
-}
-
-.experiencia-item .periodo {
-    color: #94a3b8;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-}
-
-.experiencia-item p {
-    color: #cbd5e1;
-}
-
-.emprego-atual {
-    display: inline-block;
-    margin-top: 8px;
-    background: rgba(34, 197, 94, 0.15);
-    color: #4ade80;
-    border: 1px solid rgba(34, 197, 94, 0.3);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-/* =========================
-   HABILIDADES
-========================= */
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-}
-
-.skill {
-    background: #1e293b;
-    padding: 18px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: bold;
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    transition: 0.3s;
-}
-
-.skill:hover {
-    background: #2563eb;
-    transform: translateY(-5px);
-    border-color: #2563eb;
-}
-
-/* =========================
-   CONTATO
-========================= */
-
-.contact {
-    text-align: center;
-}
-
-.contact a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-.contact a:hover {
-    color: #7dd3fc;
-    text-decoration: underline;
-}
-
-.social-links,
-.whatsapp-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.social-links a {
-    display: inline-block;
-    padding: 10px 25px;
-    background: #0f172a;
-    border-radius: 50px;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    background: #2563eb;
-    color: white;
-    border-color: #2563eb;
-    transform: translateY(-3px);
-    text-decoration: none;
-}
-
-.whatsapp-links a {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.whatsapp-pessoal {
-    background: #25D366;
-}
-
-.whatsapp-pessoal:hover {
-    background: #1da851;
-    transform: translateY(-3px);
-    text-decoration: none !important;
-}
-
-.whatsapp-comercial {
-    background: #128C7E;
-}
-
-.whatsapp-comercial:hover {
-    background: #0d6b5f;
-    transform: translateY(-3px);
-    text-decoration: none !important;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: #020617;
-    text-align: center;
-    padding: 30px;
-    color: #94a3b8;
-    border-top: 1px solid rgba(56, 189, 248, 0.05);
-}
-
-/* =========================
-   ANIMAÇÕES
-========================= */
-
-@keyframes fadeInDown {
-
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 2.3rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    section {
-        padding: 60px 20px;
-    }
-
-    .projects {
-        grid-template-columns: 1fr;
-    }
-
-    .skills {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero .badge {
-        font-size: 0.75rem;
-        padding: 5px 12px;
-    }
-
-    .whatsapp-links {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .skills {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .skill {
-        padding: 12px;
-        font-size: 0.9rem;
-    }
-
-    .section-title {
-        font-size: 1.6rem;
-    }
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+html{scroll-padding-top:78px}
+body{font-family:'Inter','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-3;background:
+ radial-gradient(circle at 15% 20%,rgba(37,99,235,.16),transparent 34%),
+ radial-gradient(circle at 85% 30%,rgba(56,189,248,.12),transparent 28%),
+ radial-gradient(circle at 50% 85%,rgba(14,165,233,.10),transparent 34%),
+ linear-gradient(160deg,#06101d 0%,#0b1728 48%,#07111f 100%)}
+#particles{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.72}
+.aurora{position:fixed;width:370px;height:370px;border-radius:50%;filter:blur(95px);opacity:.18;z-index:-1;pointer-events:none;animation:floatGlow 13s ease-in-out infinite alternate}
+.aurora.one{background:#0ea5e9;top:-80px;left:-100px}.aurora.two{background:#4f46e5;right:-100px;top:32%;animation-delay:-5s}.aurora.three{background:#06b6d4;bottom:-120px;left:35%;animation-delay:-9s}
+@keyframes floatGlow{to{transform:translate3d(50px,35px,0) scale(1.13)}}
+
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(5,13,24,.76);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-wrap{max-width:1180px;margin:auto;height:70px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.3px}.brand span{color:var(--primary)}
+.nav-links{display:flex;gap:18px;list-style:none}.nav-links a{color:#d8e4ef;text-decoration:none;font-size:.9rem;font-weight:600;transition:.25s}.nav-links a:hover{color:var(--primary)}
+.menu-btn{display:none;border:1px solid var(--border);background:rgba(255,255,255,.04);color:#fff;border-radius:10px;padding:8px 11px;font-size:1.15rem}
+
+header{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:110px 24px 70px;position:relative}
+.hero{width:min(1040px,100%);text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid var(--border);background:rgba(56,189,248,.08);color:#b9e9fb;border-radius:999px;font-size:.84rem;margin-bottom:22px}
+.hero h1{font-size:clamp(2.55rem,7vw,5.2rem);line-height:1.04;letter-spacing:-.055em;margin-bottom:20px;animation:fadeDown .85s ease both}.hero h1 span{background:linear-gradient(90deg,#7dd3fc,#38bdf8,#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{max-width:820px;margin:0 auto 12px;color:#c6d4e2;font-size:clamp(1rem,2vw,1.22rem);animation:fadeUp .9s .08s ease both}.hero .sublead{color:#8fa2b8;font-size:.96rem;max-width:770px;margin:auto}
+.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:26px 0}.badge{padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:rgba(15,31,51,.72);color:#d9f4ff;font-size:.84rem}
+.hero-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 23px;border-radius:12px;background:linear-gradient(135deg,var(--primary2),#0ea5e9);color:white;text-decoration:none;font-weight:750;border:1px solid rgba(255,255,255,.08);box-shadow:0 12px 30px rgba(37,99,235,.18);transition:.28s}.btn:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(37,99,235,.26)}.btn-outline{background:rgba(255,255,255,.035);border-color:var(--border);box-shadow:none}.btn-outline:hover{background:rgba(56,189,248,.09);border-color:rgba(56,189,248,.42)}
+.scroll-indicator{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#71849b;font-size:.78rem;animation:bob 1.8s infinite}@keyframes bob{50%{transform:translate(-50%,7px)}}
+
+main{position:relative}section{padding:90px 24px}.container{max-width:1140px;margin:auto}.section-kicker{text-align:center;text-transform:uppercase;letter-spacing:.2em;color:#7dd3fc;font-size:.75rem;font-weight:800}.section-title{text-align:center;font-size:clamp(1.8rem,4vw,2.65rem);margin:6px 0 38px;letter-spacing:-.03em}.section-title span{color:var(--primary)}
+.glass{background:linear-gradient(145deg,rgba(15,31,51,.85),rgba(9,22,39,.72));border:1px solid var(--border);box-shadow:0 20px 55px rgba(0,0,0,.18);backdrop-filter:blur(12px);border-radius:20px}
+.about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:24px}.about-card{padding:32px}.about-card p{color:#c5d2df;margin-bottom:13px}.quick-info{padding:28px;display:grid;gap:16px}.info-line{padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06)}.info-line:last-child{border:0;padding-bottom:0}.info-line small{display:block;color:#72879e}.info-line strong{font-size:.95rem;color:#edf6ff}
+
+.timeline{position:relative;max-width:930px;margin:auto}.timeline::before{content:"";position:absolute;left:18px;top:4px;bottom:4px;width:2px;background:linear-gradient(var(--primary),rgba(56,189,248,.08))}.timeline-item{position:relative;margin-left:55px;margin-bottom:20px;padding:24px 26px}.timeline-item::before{content:"";position:absolute;width:14px;height:14px;border-radius:50%;left:-45px;top:29px;background:#0b1728;border:3px solid var(--primary);box-shadow:0 0 0 5px rgba(56,189,248,.09)}.timeline-item.current::before{border-color:var(--green);box-shadow:0 0 0 5px rgba(52,211,153,.10)}.job-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.timeline-item h3{font-size:1.06rem}.role{color:#7dd3fc;font-weight:700;margin-top:3px}.date{color:#8fa2b8;font-size:.82rem;white-space:nowrap}.timeline-item p.desc{color:#b9c8d7;margin-top:10px;font-size:.93rem}.current-tag{display:inline-block;margin-top:10px;padding:4px 10px;background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.25);color:#6ee7b7;border-radius:999px;font-size:.75rem;font-weight:800}
+
+.education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.edu{padding:28px}.edu .icon{font-size:1.8rem}.edu h3{margin:8px 0 5px;color:#eaf7ff}.edu .school{color:#7dd3fc;font-weight:650}.edu p{color:#aebed0;margin-top:10px}.edu .period{color:#7f93aa;font-size:.84rem;margin-top:8px}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}.skill{padding:20px;text-align:center;font-weight:750;transition:.28s;position:relative;overflow:hidden}.skill::after{content:"";position:absolute;inset:auto -30% -70% -30%;height:95%;background:radial-gradient(circle,rgba(56,189,248,.16),transparent 68%);transition:.35s}.skill:hover{transform:translateY(-6px);border-color:rgba(56,189,248,.42)}.skill:hover::after{bottom:-45%}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}.project{overflow:hidden;transition:.3s}.project:hover{transform:translateY(-7px);border-color:rgba(56,189,248,.38)}.project-cover{height:155px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,rgba(37,99,235,.24),rgba(14,165,233,.08))}.project-body{padding:24px}.project-body h3{margin-bottom:8px}.project-body p{color:#aebed0;font-size:.91rem}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}.tag{font-size:.73rem;color:#bfefff;border:1px solid var(--border);background:rgba(56,189,248,.07);padding:4px 9px;border-radius:999px}.project-links{display:flex;gap:14px}.project-links a{color:#7dd3fc;text-decoration:none;font-weight:700;font-size:.86rem}.project-links a:hover{text-decoration:underline}
+
+.github-card{padding:35px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px}.github-card h3{font-size:1.55rem;margin-bottom:7px}.github-card p{color:#aebed0;max-width:720px}.github-user{color:#7dd3fc;font-weight:700}
+.contact-card{padding:34px;text-align:center}.contact-card p{color:#b6c5d4}.contact-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}.contact-note{margin-top:20px;color:#6f859d!important;font-size:.83rem}
+footer{text-align:center;padding:28px 20px;border-top:1px solid rgba(255,255,255,.055);color:#71849b;background:rgba(2,6,23,.3)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-28px)}to{opacity:1;transform:none}}@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}.github-card{grid-template-columns:1fr}.education-grid{grid-template-columns:1fr}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:rgba(5,13,24,.97);padding:20px 24px;border-bottom:1px solid var(--border)}.nav-links.open{display:flex}.menu-btn{display:block}.job-head{flex-direction:column;gap:3px}.date{white-space:normal}}
+@media(max-width:560px){section{padding:72px 18px}.hero-buttons,.contact-actions{flex-direction:column}.btn{width:100%}.timeline::before{left:10px}.timeline-item{margin-left:38px;padding:21px}.timeline-item::before{left:-36px}.about-card,.quick-info,.github-card,.contact-card{padding:23px}.hero{padding-top:25px}.badges{gap:7px}.badge{font-size:.75rem}.scroll-indicator{display:none}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#particles,.aurora{display:none}}
 
 </style>
-
 </head>
-
 <body>
+<canvas id="particles" aria-hidden="true"></canvas>
+<div class="aurora one"></div><div class="aurora two"></div><div class="aurora three"></div>
 
-<!-- =========================
-     INÍCIO
-========================= -->
+<nav>
+  <div class="nav-wrap">
+    <a class="brand" href="#inicio">Thales<span>.dev</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li><li><a href="#formacao">Formação</a></li><li><a href="#experiencia">Experiência</a></li><li><a href="#habilidades">Habilidades</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#github">GitHub</a></li><li><a href="#contato">Contato</a></li>
+    </ul>
+  </div>
+</nav>
 
-<header>
-
-    <div class="hero">
-
-        <h1>
-            Olá, eu sou
-            <span>Thales Marques Rodrigues</span>
-        </h1>
-
-        <div class="badges">
-
-            <span class="badge">
-                💻 Desenvolvedor Web
-            </span>
-
-            <span class="badge">
-                ⚛️ React
-            </span>
-
-            <span class="badge">
-                📊 Power BI
-            </span>
-
-            <span class="badge">
-                🐧 Linux & VPS
-            </span>
-
-            <span class="badge">
-                🗄️ Banco de Dados
-            </span>
-
-        </div>
-
-        <p>
-            🎓 Estudante de
-            <strong>Sistemas para Internet - IFTO</strong>
-        </p>
-
-        <p>
-            Desenvolvimento de aplicações web, sistemas,
-            banco de dados e soluções digitais.
-        </p>
-
-        <p>
-            ✔ Mais de <strong>14 projetos desenvolvidos</strong>
-            <br>
-            ✔ <strong>7 sistemas</strong> hospedados em VPS própria
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#projetos" class="btn">
-                🚀 Ver Projetos
-            </a>
-
-            <a
-                href="https://github.com/Thales-uft2022-2"
-                target="_blank"
-                class="btn btn-outline"
-            >
-                🐙 GitHub
-            </a>
-
-            <a href="#contato" class="btn btn-outline">
-                📧 Contato
-            </a>
-
-        </div>
-
+<header id="inicio">
+  <div class="hero">
+    <div class="eyebrow">💻 Sistemas para Internet • IFTO</div>
+    <h1>Olá, eu sou <span>Thales Marques Rodrigues</span></h1>
+    <p class="lead">Estudante de Sistemas para Internet, com experiência prática em desenvolvimento web, criação de sites e aplicativos mobile para Android e iOS, suporte técnico e estruturação de banco de dados.</p>
+    <p class="sublead">Atuo em projetos próprios e colaborativos, com foco em aplicações web, organização de dados, atendimento técnico e resolução de problemas.</p>
+    <div class="badges">
+      <span class="badge">🌐 Criação de Sites</span><span class="badge">📱 Apps Android & iOS</span><span class="badge">💻 PHP / HTML / MySQL</span><span class="badge">🛠️ Suporte Técnico</span><span class="badge">🗄️ Banco de Dados</span><span class="badge">🤝 Trabalho em Equipe</span><span class="badge">🧠 Resolução de Problemas</span>
     </div>
-
+    <div class="hero-buttons">
+      <a class="btn" href="#projetos">🚀 Ver projetos</a>
+      <a class="btn btn-outline" href="https://github.com/Thales-uft2022-2" target="_blank" rel="noopener">🐙 Meu GitHub</a>
+      <a class="btn btn-outline" href="#contato">✉️ Contato</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">role para explorar ↓</div>
 </header>
 
+<main>
+<section id="sobre"><div class="container">
+  <div class="section-kicker">Perfil</div><h2 class="section-title">Sobre <span>mim</span></h2>
+  <div class="about-grid reveal">
+    <article class="glass about-card">
+      <p>Sou estudante de <strong>Sistemas para Internet no Instituto Federal do Tocantins (IFTO)</strong>, atualmente no 2º período, com previsão de conclusão em 2029.</p>
+      <p>Tenho experiência prática em <strong>desenvolvimento web, criação de sites, aplicativos mobile para Android e iOS e suporte técnico</strong>. Participei de projetos próprios e colaborativos, incluindo o sistema <strong>hospitalmedico.com</strong>, voltado ao agendamento de consultas médicas com PHP, MySQL e HTML.</p>
+      <p>Também possuo conhecimentos em <strong>hospedagem de sites com cPanel/HostGator</strong>, estruturação de banco de dados, montagem de computadores, informática avançada e boas práticas de desenvolvimento.</p>
+    </article>
+    <aside class="glass quick-info">
+      <div class="info-line"><small>Formação atual</small><strong>Sistemas para Internet — IFTO</strong></div>
+      <div class="info-line"><small>Período</small><strong>2º período • conclusão prevista em 2029</strong></div>
+      <div class="info-line"><small>Localização</small><strong>Palmas — Tocantins</strong></div>
+      <div class="info-line"><small>Foco técnico</small><strong>Desenvolvimento Web • Sites • Apps Android/iOS • Suporte • Banco de Dados</strong></div>
+    </aside>
+  </div>
+</div></section>
 
-<!-- =========================
-     SOBRE MIM
-========================= -->
+<section id="formacao"><div class="container">
+  <div class="section-kicker">Educação</div><h2 class="section-title">Formação <span>acadêmica</span></h2>
+  <div class="education-grid reveal">
+    <article class="glass edu"><div class="icon">🎓</div><h3>Sistemas para Internet</h3><div class="school">Instituto Federal do Tocantins — IFTO</div><div class="period">2026 — Em andamento</div><p>Atualmente cursando o 2º período, com participação em projetos acadêmicos e desenvolvimento de sistemas web. Conclusão prevista para 2029.</p></article>
+    <article class="glass edu"><div class="icon">📘</div><h3>Ensino Médio Completo</h3><div class="school">Centro de Ensino Médio Tiradentes — Palmas/TO</div><div class="period">2014 — 2016</div><p>1º ao 3º ano concluídos.</p></article>
+  </div>
+</div></section>
 
-<section id="sobre">
+<section id="experiencia"><div class="container">
+  <div class="section-kicker">Trajetória</div><h2 class="section-title">Experiência <span>profissional</span></h2>
+  <div class="timeline reveal">
+    <article class="glass timeline-item current"><div class="job-head"><div><h3>Outback Steakhouse Restaurantes Brasil S.A.</h3><div class="role">Auxiliar de Limpeza — Salão</div></div><div class="date">2026 — No momento</div></div><span class="current-tag">● Emprego atual</span><p class="desc">Atuação na limpeza, organização e conservação do salão, contribuindo para manter o ambiente adequado para clientes e equipe.</p></article>
+    <article class="glass timeline-item"><div class="job-head"><div><h3>Embrapa Pesca e Aquicultura — Loteamento (TO)</h3><div class="role">Bolsista FAPT</div></div><div class="date">2025 — 2026</div></div><p class="desc">Apoio administrativo e apoio nos processos de custos e viagens.</p></article>
+    <article class="glass timeline-item"><div class="job-head"><div><h3>Secretaria do Meio Ambiente e Recursos Hídricos — SEMARH/TO</h3><div class="role">Estagiário TI</div></div><div class="date">2024 — 2025</div></div><p class="desc">Apoio em suporte técnico aos usuários da diretoria de Planejamento e Gestão de Recursos Hídricos, em atividades ligadas à área de tecnologia.</p></article>
+    <article class="glass timeline-item"><div class="job-head"><div><h3>CNSD Distribuidora S/A — Palmas/TO</h3><div class="role">Repositor de Mercadorias</div></div><div class="date">2022 — 2024</div></div><p class="desc">Organização, conservação e precificação de produtos, registro de entrada e saída de mercadorias, abastecimento de prateleiras e controle de materiais.</p></article>
+    <article class="glass timeline-item"><div class="job-head"><div><h3>Corteva Agriscience do Brasil — Porto Nacional/TO</h3><div class="role">Técnico de Apoio em Pesquisa e Desenvolvimento</div></div><div class="date">2022</div></div><p class="desc">Auxílio em pesquisas de melhoramento genético de milho e soja, incluindo plantio, contagem de espigas e anotações de características em campo.</p></article>
+    <article class="glass timeline-item"><div class="job-head"><div><h3>Corteva Agriscience — Aparecida do Rio Negro/TO</h3><div class="role">Técnico de Apoio em Pesquisa e Desenvolvimento — Contrato Temporário</div></div><div class="date">2021</div></div><p class="desc">Auxílio em plantio e manejo experimental de híbridos de milho e soja, coleta de dados, manutenção de campos e organização de materiais.</p></article>
+    <article class="glass timeline-item"><div class="job-head"><div><h3>Allis Soluções em Trade e Pessoal LTDA — Grupo Extra — Palmas/TO</h3><div class="role">Repositor / Operador de Caixa</div></div><div class="date">2021 — 2022</div></div><p class="desc">Reposição de mercadorias, atendimento ao cliente, organização do setor e operação de caixa.</p></article>
+  </div>
+</div></section>
 
-    <h2 class="section-title">
-        Sobre Mim
-    </h2>
+<section id="habilidades"><div class="container">
+  <div class="section-kicker">Competências</div><h2 class="section-title">Tecnologias e <span>habilidades</span></h2>
+  <div class="skills-grid reveal">
+    <div class="glass skill">🌐 Criação de Sites</div><div class="glass skill">📱 Aplicativos Mobile</div><div class="glass skill">🤖 Android</div><div class="glass skill">🍎 iOS</div><div class="glass skill">🐘 PHP</div><div class="glass skill">🌐 HTML</div><div class="glass skill">🗄️ MySQL</div><div class="glass skill">🎨 CSS</div><div class="glass skill">📜 JavaScript</div><div class="glass skill">🐙 GitHub</div><div class="glass skill">🌍 cPanel / HostGator</div><div class="glass skill">🛠️ Suporte Técnico</div><div class="glass skill">🖥️ Montagem de Computadores</div><div class="glass skill">💡 Informática Avançada</div><div class="glass skill">🤝 Trabalho em Equipe</div><div class="glass skill">🧠 Resolução de Problemas</div>
+  </div>
+</div></section>
 
-    <div class="card">
+<section id="projetos"><div class="container">
+  <div class="section-kicker">Portfólio técnico</div><h2 class="section-title">Projetos em <span>destaque</span></h2>
+  <div class="projects reveal">
+    <article class="glass project"><div class="project-cover">🏥</div><div class="project-body"><h3>hospitalmedico.com</h3><p>Sistema web voltado ao agendamento de consultas médicas, citado no currículo como projeto prático de desenvolvimento.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML</span></div></div></article>
+    <article class="glass project"><div class="project-cover">💰</div><div class="project-body"><h3>DinDin</h3><p>Sistema de gestão financeira pessoal para controle de receitas, despesas e histórico financeiro.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span></div><div class="project-links"><a href="https://thales-uft2022-2.github.io/DinDin/" target="_blank" rel="noopener">Ver projeto ↗</a><a href="https://github.com/Thales-uft2022-2/DinDin" target="_blank" rel="noopener">Código ↗</a></div></div></article>
+    <article class="glass project"><div class="project-cover">🏫</div><div class="project-body"><h3>Portal do Aluno</h3><p>Sistema acadêmico com área pública e restrita, desenvolvido com foco em interface responsiva.</p><div class="tags"><span class="tag">React.js</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div><div class="project-links"><a href="https://thales-uft2022-2.github.io/portal-do-aluno/" target="_blank" rel="noopener">Ver projeto ↗</a><a href="https://github.com/Thales-uft2022-2/portal-do-aluno" target="_blank" rel="noopener">Código ↗</a></div></div></article>
+    <article class="glass project"><div class="project-cover">🤖</div><div class="project-body"><h3>FinanceAI</h3><p>Aplicação de gestão financeira pessoal com organização de transações, histórico e recursos inteligentes.</p><div class="tags"><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Banco de Dados</span></div><div class="project-links"><a href="https://thales-uft2022-2.github.io/FinanceAI/" target="_blank" rel="noopener">Ver projeto ↗</a><a href="https://github.com/Thales-uft2022-2/FinanceAI" target="_blank" rel="noopener">Código ↗</a></div></div></article>
+    <article class="glass project"><div class="project-cover">🌱</div><div class="project-body"><h3>AgroTech</h3><p>Projeto de sistema de gestão para o agronegócio, com recursos de controle e gerenciamento de informações.</p><div class="tags"><span class="tag">Web</span><span class="tag">Banco de Dados</span><span class="tag">Gestão</span></div><div class="project-links"><a href="https://github.com/Thales-uft2022-2/agrotech" target="_blank" rel="noopener">Código ↗</a></div></div></article>
 
-        <p style="font-size: 1.05rem;">
+    <article class="glass project">
+      <div class="project-cover">🥩</div>
+      <div class="project-body">
+        <h3>Outback Palmas</h3>
+        <p>Sistema web para gerenciamento de usuários e reservas, com login, área do cliente e painel administrativo.</p>
+        <div class="tags">
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://thales-uft2022-2.github.io/outback-palmas/" target="_blank" rel="noopener">Ver projeto ↗</a>
+          <a href="https://github.com/Thales-uft2022-2/outback-palmas" target="_blank" rel="noopener">Código ↗</a>
+        </div>
+      </div>
+    </article>
 
-            Sou estudante de
-            <strong>Sistemas para Internet</strong>
-            no Instituto Federal do Tocantins (IFTO),
-            com interesse em desenvolvimento de sistemas,
-            aplicações web, banco de dados e infraestrutura de TI.
-
-        </p>
-
-        <p style="margin-top: 15px;">
-
-            Possuo experiência com
-            <strong>desenvolvimento web</strong>,
-            suporte técnico, administração de servidores Linux,
-            hospedagem em VPS, banco de dados e análise de dados
-            utilizando Power BI.
-
-        </p>
-
-        <p style="margin-top: 15px;">
-
-            Já atuei como
-            <strong>Bolsista FAPT na Embrapa Pesca e Aquicultura</strong>,
-            participando de atividades administrativas e tecnológicas,
-            além de ter experiência como
-            <strong>Estagiário de Tecnologia da Informação na SEMARH-TO</strong>.
-
-        </p>
-
-        <p style="margin-top: 15px;">
-
-            Também participei do
-            <strong>Projeto PSID</strong>
-            como Instrutor de Informática Básica,
-            contribuindo para a capacitação digital de estudantes
-            e participantes do projeto.
-
-        </p>
-
-        <p style="margin-top: 15px;">
-
-            Atualmente trabalho no
-            <strong>Outback Steakhouse Palmas</strong>,
-            localizado no Capim Dourado Shopping,
-            atuando como
-            <strong>Auxiliar de Limpeza - Salão</strong>.
-
-        </p>
-
-        <p style="margin-top: 15px;">
-
-            Durante minha trajetória acadêmica e profissional,
-            desenvolvi mais de
-            <strong>14 projetos</strong>,
-            incluindo sistemas financeiros, sistemas acadêmicos,
-            plataformas de agendamento, sistemas de gestão
-            e aplicações web.
-
-        </p>
-
-    </div>
-
+  </div>
+</div>
 </section>
 
-
-<!-- =========================
-     FORMAÇÃO
-========================= -->
-
-<section id="formacao">
-
-    <h2 class="section-title">
-        Formação Acadêmica
-    </h2>
-
-    <div class="card">
-
-        <h3>
-            🎓 Sistemas para Internet - IFTO
-        </h3>
-
-        <p style="color: #94a3b8;">
-            Instituto Federal do Tocantins
-        </p>
-
-        <p style="margin-top: 10px;">
-
-            Curso superior voltado para desenvolvimento web,
-            programação, banco de dados, engenharia de software,
-            redes, sistemas para internet e tecnologias digitais.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PROJETOS
-========================= -->
-
-<section id="projetos">
-
-    <h2 class="section-title">
-        Projetos em Destaque
-    </h2>
-
-    <div class="projects">
-
-
-        <!-- DINDIN -->
-
-        <div class="project">
-
-            <div
-                class="project-img-placeholder"
-                style="background: linear-gradient(135deg, #1a472a, #2d8a4e);"
-            >
-                💰
-            </div>
-
-            <div class="project-body">
-
-                <h3>
-                    💰 DinDin
-                </h3>
-
-                <p>
-                    Sistema de gestão financeira pessoal para
-                    controle de receitas, despesas, categorias,
-                    histórico financeiro e saldo mensal.
-                </p>
-
-                <div class="project-tags">
-
-                    <span class="project-tag">
-                        PHP
-                    </span>
-
-                    <span class="project-tag">
-                        MySQL
-                    </span>
-
-                    <span class="project-tag">
-                        JavaScript
-                    </span>
-
-                </div>
-
-                <div class="project-links">
-
-                    <a
-                        href="https://thales-uft2022-2.github.io/DinDin/"
-                        target="_blank"
-                    >
-                        🔗 Ver Projeto
-                    </a>
-
-                    <a
-                        href="https://github.com/Thales-uft2022-2/DinDin"
-                        target="_blank"
-                    >
-                        📂 Código
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PORTAL DO ALUNO -->
-
-        <div class="project">
-
-            <div
-                class="project-img-placeholder"
-                style="background: linear-gradient(135deg, #1e3a5f, #3b82f6);"
-            >
-                🏫
-            </div>
-
-            <div class="project-body">
-
-                <h3>
-                    🏫 Portal do Aluno
-                </h3>
-
-                <p>
-                    Sistema acadêmico com área pública e área
-                    restrita, desenvolvido com foco em interface
-                    responsiva e experiência do usuário.
-                </p>
-
-                <div class="project-tags">
-
-                    <span class="project-tag">
-                        React.js
-                    </span>
-
-                    <span class="project-tag">
-                        CSS3
-                    </span>
-
-                    <span class="project-tag">
-                        JavaScript
-                    </span>
-
-                </div>
-
-                <div class="project-links">
-
-                    <a
-                        href="https://thales-uft2022-2.github.io/portal-do-aluno/"
-                        target="_blank"
-                    >
-                        🔗 Ver Projeto
-                    </a>
-
-                    <a
-                        href="https://github.com/Thales-uft2022-2/portal-do-aluno"
-                        target="_blank"
-                    >
-                        📂 Código
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FINANCE AI -->
-
-        <div class="project">
-
-            <div
-                class="project-img-placeholder"
-                style="background: linear-gradient(135deg, #1a1a2e, #6c5ce7);"
-            >
-                🤖
-            </div>
-
-            <div class="project-body">
-
-                <h3>
-                    🤖 FinanceAI
-                </h3>
-
-                <p>
-                    Aplicação para gestão financeira pessoal,
-                    com organização de transações, gráficos,
-                    histórico financeiro e recursos inteligentes.
-                </p>
-
-                <div class="project-tags">
-
-                    <span class="project-tag">
-                        React.js
-                    </span>
-
-                    <span class="project-tag">
-                        Node.js
-                    </span>
-
-                    <span class="project-tag">
-                        Banco de Dados
-                    </span>
-
-                </div>
-
-                <div class="project-links">
-
-                    <a
-                        href="https://thales-uft2022-2.github.io/FinanceAI/"
-                        target="_blank"
-                    >
-                        🔗 Ver Projeto
-                    </a>
-
-                    <a
-                        href="https://github.com/Thales-uft2022-2/FinanceAI"
-                        target="_blank"
-                    >
-                        📂 Código
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- AGENDAR CONSULTAS -->
-
-        <div class="project">
-
-            <div
-                class="project-img-placeholder"
-                style="background: linear-gradient(135deg, #1e293b, #0ea5e9);"
-            >
-                🏥
-            </div>
-
-            <div class="project-body">
-
-                <h3>
-                    🏥 Agendar Consultas
-                </h3>
-
-                <p>
-                    Plataforma para gerenciamento de médicos,
-                    pacientes e consultas de forma simples
-                    e organizada.
-                </p>
-
-                <div class="project-tags">
-
-                    <span class="project-tag">
-                        PHP
-                    </span>
-
-                    <span class="project-tag">
-                        MySQL
-                    </span>
-
-                    <span class="project-tag">
-                        HTML5
-                    </span>
-
-                </div>
-
-                <div class="project-links">
-
-                    <a
-                        href="https://thales-uft2022-2.github.io/agendarconsultas1/"
-                        target="_blank"
-                    >
-                        🔗 Ver Projeto
-                    </a>
-
-                    <a
-                        href="https://github.com/Thales-uft2022-2/agendarconsultas1"
-                        target="_blank"
-                    >
-                        📂 Código
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- AGROTECH -->
-
-        <div class="project">
-
-            <div
-                class="project-img-placeholder"
-                style="background: linear-gradient(135deg, #2d5a1e, #4caf50);"
-            >
-                🌱
-            </div>
-
-            <div class="project-body">
-
-                <h3>
-                    🌱 AgroTech
-                </h3>
-
-                <p>
-                    Projeto de sistema de gestão para o agronegócio,
-                    com recursos para controle, monitoramento
-                    e gerenciamento de informações.
-                </p>
-
-                <div class="project-tags">
-
-                    <span class="project-tag">
-                        React.js
-                    </span>
-
-                    <span class="project-tag">
-                        Node.js
-                    </span>
-
-                    <span class="project-tag">
-                        PostgreSQL
-                    </span>
-
-                </div>
-
-                <div class="project-links">
-
-                    <a
-                        href="https://github.com/Thales-uft2022-2/agrotech"
-                        target="_blank"
-                    >
-                        📂 Código
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-    <div
-        style="
-            text-align: center;
-            margin-top: 40px;
-        "
-    >
-
-        <p style="color: #94a3b8;">
-
-            ⚡ Conheça outros projetos disponíveis no meu
-
-            <a
-                href="https://github.com/Thales-uft2022-2"
-                target="_blank"
-                style="
-                    color: #38bdf8;
-                    font-weight: bold;
-                "
-            >
-                GitHub
-            </a>
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     EXPERIÊNCIA
-========================= -->
-
-<section id="experiencia">
-
-    <h2 class="section-title">
-        Experiência Profissional
-    </h2>
-
-    <div class="experiencia-grid">
-
-
-        <!-- OUTBACK - EMPREGO ATUAL -->
-
-        <div class="experiencia-item atual">
-
-            <h3>
-                Outback Steakhouse Restaurantes Brasil S.A.
-            </h3>
-
-            <p class="cargo">
-                Auxiliar de Limpeza - Salão
-            </p>
-
-            <p class="periodo">
-                📅 08/07/2026 - Atual
-            </p>
-
-            <span class="emprego-atual">
-                ● Emprego Atual
-            </span>
-
-            <p style="margin-top: 12px;">
-
-                Atuação no
-                <strong>Outback Steakhouse Palmas</strong>,
-                localizado no Capim Dourado Shopping,
-                contribuindo para organização,
-                limpeza e manutenção do salão,
-                seguindo os padrões operacionais
-                e de qualidade da unidade.
-
-            </p>
-
-        </div>
-
-
-        <!-- EMBRAPA -->
-
-        <div class="experiencia-item">
-
-            <h3>
-                Embrapa Pesca e Aquicultura
-            </h3>
-
-            <p class="cargo">
-                Bolsista FAPT
-            </p>
-
-            <p class="periodo">
-                📅 08/10/2025 - 10/07/2026
-            </p>
-
-            <p>
-
-                Atuação em atividades administrativas
-                e tecnológicas, apoio em sistemas,
-                organização de informações,
-                dados e processos institucionais.
-
-            </p>
-
-        </div>
-
-
-        <!-- SEMARH -->
-
-        <div class="experiencia-item">
-
-            <h3>
-                SEMARH - TO
-            </h3>
-
-            <p class="cargo">
-                Estagiário de Tecnologia da Informação
-            </p>
-
-            <p class="periodo">
-                📅 2024 - 2025
-            </p>
-
-            <p>
-
-                Experiência com suporte técnico,
-                sistemas, banco de dados
-                e infraestrutura de Tecnologia da Informação.
-
-            </p>
-
-        </div>
-
-
-        <!-- PSID -->
-
-        <div class="experiencia-item">
-
-            <h3>
-                Projeto PSID
-            </h3>
-
-            <p class="cargo">
-                Instrutor de Informática Básica
-            </p>
-
-            <p class="periodo">
-                📅 24/04/2026 - 28/06/2026
-            </p>
-
-            <p>
-
-                Atuação como instrutor em aulas
-                de Informática Básica,
-                abordando ferramentas digitais,
-                planilhas eletrônicas,
-                comunicação digital,
-                segurança na internet
-                e utilização de tecnologias.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     HABILIDADES
-========================= -->
-
-<section id="habilidades">
-
-    <h2 class="section-title">
-        Tecnologias e Habilidades
-    </h2>
-
-    <div class="skills">
-
-        <div class="skill">
-            🌐 HTML5
-        </div>
-
-        <div class="skill">
-            🎨 CSS3
-        </div>
-
-        <div class="skill">
-            📜 JavaScript
-        </div>
-
-        <div class="skill">
-            ⚡ PHP
-        </div>
-
-        <div class="skill">
-            ⚛️ React.js
-        </div>
-
-        <div class="skill">
-            🟢 Node.js
-        </div>
-
-        <div class="skill">
-            🐬 MySQL
-        </div>
-
-        <div class="skill">
-            🐘 PostgreSQL
-        </div>
-
-        <div class="skill">
-            🗄️ Banco de Dados
-        </div>
-
-        <div class="skill">
-            🔀 Git
-        </div>
-
-        <div class="skill">
-            🐙 GitHub
-        </div>
-
-        <div class="skill">
-            🐧 Linux
-        </div>
-
-        <div class="skill">
-            ☁️ Hospedagem VPS
-        </div>
-
-        <div class="skill">
-            📊 Power BI
-        </div>
-
-        <div class="skill">
-            🛠️ Suporte Técnico
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTATO
-========================= -->
-
-<section id="contato">
-
-    <h2 class="section-title">
-        Contato
-    </h2>
-
-    <div class="card contact">
-
-        <p style="font-size: 1.1rem;">
-
-            📧 <strong>Email:</strong>
-
-            <a href="mailto:thalesmarques530@gmail.com">
-                thalesmarques530@gmail.com
-            </a>
-
-        </p>
-
-
-        <div style="margin-top: 25px;">
-
-            <p
-                style="
-                    font-size: 1.1rem;
-                    margin-bottom: 15px;
-                "
-            >
-
-                💬 <strong>WhatsApp</strong>
-
-            </p>
-
-
-            <div class="whatsapp-links">
-
-                <a
-                    href="https://wa.me/5563992426451"
-                    target="_blank"
-                    class="whatsapp-pessoal"
-                >
-                    📱 Pessoal: (63) 99242-6451
-                </a>
-
-                <a
-                    href="https://wa.me/556332297819"
-                    target="_blank"
-                    class="whatsapp-comercial"
-                >
-                    🏢 Comercial: (63) 3229-7819
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="social-links">
-
-            <a
-                href="https://github.com/Thales-uft2022-2"
-                target="_blank"
-            >
-                🐙 GitHub
-            </a>
-
-            <a
-                href="mailto:thalesmarques530@gmail.com"
-            >
-                📧 Email
-            </a>
-
-        </div>
-
-
-        <p
-            style="
-                margin-top: 25px;
-                color: #94a3b8;
-            "
-        >
-            📍 Palmas - Tocantins - Brasil
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     RODAPÉ
-========================= -->
-
-<footer>
-
-    <p>
-        © 2026 - Thales Marques Rodrigues |
-        Estudante de Sistemas para Internet & Desenvolvedor Web
-    </p>
-
-</footer>
-
+<section id="github"><div class="container">
+  <div class="section-kicker">Código aberto</div><h2 class="section-title">Meu <span>GitHub</span></h2>
+  <div class="glass github-card reveal"><div><h3>🐙 Thales-uft2022-2</h3><p>Meu GitHub reúne projetos acadêmicos e pessoais de desenvolvimento web. Use o perfil para acompanhar os repositórios, códigos-fonte e evoluções dos projetos apresentados neste portfólio.</p><div class="github-user">github.com/Thales-uft2022-2</div></div><a class="btn" href="https://github.com/Thales-uft2022-2" target="_blank" rel="noopener">Abrir GitHub ↗</a></div>
+</div></section>
+
+<section id="contato"><div class="container">
+  <div class="section-kicker">Fale comigo</div><h2 class="section-title">Entre em <span>contato</span></h2>
+  <div class="glass contact-card reveal"><p>Se quiser conversar sobre oportunidades, criação de sites, aplicativos mobile Android/iOS, projetos de desenvolvimento web ou suporte técnico, meus contatos estão abaixo.</p><div class="contact-actions"><a class="btn" href="mailto:thalesmarques530@gmail.com">📧 E-mail</a><a class="btn btn-outline" href="https://wa.me/5563992426451" target="_blank" rel="noopener">💬 WhatsApp</a><a class="btn btn-outline" href="https://github.com/Thales-uft2022-2" target="_blank" rel="noopener">🐙 GitHub</a></div><p class="contact-note">Palmas — Tocantins — Brasil</p></div>
+</div></section>
+</main>
+<footer>© 2026 — Thales Marques Rodrigues • Sistemas para Internet • Portfólio profissional</footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
+let particles=[],w=0,h=0,dpr=Math.min(window.devicePixelRatio||1,2);
+function resize(){w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);const count=Math.min(85,Math.max(38,Math.floor(w/18)));particles=Array.from({length:count},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.45+.45}))}
+function draw(){ctx.clearRect(0,0,w,h);for(const p of particles){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(125,211,252,.55)';ctx.fill()}for(let i=0;i<particles.length;i++){for(let j=i+1;j<particles.length;j++){const a=particles[i],b=particles[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<115){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(56,189,248,${(1-d/115)*.08})`;ctx.lineWidth=.6;ctx.stroke()}}}requestAnimationFrame(draw)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){resize();draw();addEventListener('resize',resize)}
+</script>
 </body>
 </html>
